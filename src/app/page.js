@@ -1,95 +1,95 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Hero from '../../components/Hero';
+import CakeGrid from '../../components/CakeGrid';
+import styles from '../../styles/Home.module.css'; // Optional: For homepage specific styles
+import Navbar from '../../components/Navbar';
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  // Sample cake data (replace with your actual data)
+  const cakeData = [
+    {
+      id: 1,
+      name: 'Chocolate Fudge Cake',
+      image: '/images/hero-cakes/pexels-ozrenildo-1291712.jpg', // Place your cake images in public/images/cakes/
+      description: 'Rich and decadent chocolate cake.',
+    },
+    {
+      id: 2,
+      name: 'Vanilla Bean Cake',
+      image: '/images/hero-cakes/pexels-pixabay-265801.jpg',
+      description: 'Classic vanilla cake with a hint of bean.',
+    },
+    {
+      id: 3,
+      name: 'Strawberry Swirl Cake',
+      image: '/images/hero-cakes/pexels-vojtech-okenka-127162-1055272.jpg',
+      description: 'Delightful strawberry flavored cake.',
+    },
+    {
+      id: 4,
+      name: 'Chocolate Fudge Cake',
+      image: '/images/hero-cakes/pexels-ozrenildo-1291712.jpg', // Place your cake images in public/images/cakes/
+      description: 'Rich and decadent chocolate cake.',
+    },
+    {
+      id: 5,
+      name: 'Vanilla Bean Cake',
+      image: '/images/hero-cakes/pexels-pixabay-265801.jpg',
+      description: 'Classic vanilla cake with a hint of bean.',
+    },
+    {
+      id: 6,
+      name: 'Strawberry Swirl Cake',
+      image: '/images/hero-cakes/pexels-vojtech-okenka-127162-1055272.jpg',
+      description: 'Delightful strawberry flavored cake.',
+    },
+    {
+      id: 7,
+      name: 'Chocolate Fudge Cake',
+      image: '/images/hero-cakes/pexels-ozrenildo-1291712.jpg', // Place your cake images in public/images/cakes/
+      description: 'Rich and decadent chocolate cake.',
+    },
+    {
+      id: 8,
+      name: 'Vanilla Bean Cake',
+      image: '/images/hero-cakes/pexels-pixabay-265801.jpg',
+      description: 'Classic vanilla cake with a hint of bean.',
+    },
+    {
+      id: 9,
+      name: 'Strawberry Swirl Cake',
+      image: '/images/hero-cakes/pexels-vojtech-okenka-127162-1055272.jpg',
+      description: 'Delightful strawberry flavored cake.',
+    },
+    {
+      id: 10,
+      name: 'Chocolate Fudge Cake',
+      image: '/images/hero-cakes/pexels-ozrenildo-1291712.jpg', // Place your cake images in public/images/cakes/
+      description: 'Rich and decadent chocolate cake.',
+    },
+    {
+      id: 11,
+      name: 'Vanilla Bean Cake',
+      image: '/images/hero-cakes/pexels-pixabay-265801.jpg',
+      description: 'Classic vanilla cake with a hint of bean.',
+    },
+    {
+      id: 12,
+      name: 'Strawberry Swirl Cake',
+      image: '/images/hero-cakes/pexels-vojtech-okenka-127162-1055272.jpg',
+      description: 'Delightful strawberry flavored cake.',
+    },
+    
+    // Add more cake objects here
+  ];
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
+  return (
+    <div>
+      <Navbar />
+      <Hero/>
+      <main id='main-container' className={styles.main}> {/* Optional: Style the main content area */}
+        <CakeGrid cakes={cakeData} />
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
     </div>
   );
 }

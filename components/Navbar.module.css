@@ -1,0 +1,107 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  padding: 1rem 2rem;
+  transition: all 0.3s ease;
+  background: linear-gradient(to bottom, rgba(26, 26, 26, 0.9), transparent);
+}
+
+.scrolled {
+  background: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.logoText {
+  font-family: serif;
+  font-size: 1.5rem;
+  color: #fff;
+  background: linear-gradient(45deg, #fff, #f3c4a8, #fff);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: shine 3s linear infinite;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #f3c4a8;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover {
+  color: #fff;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .navLinks {
+    gap: 1rem;
+  }
+
+  .logoText {
+    font-size: 1.25rem;
+  }
+
+  .navLink {
+    font-size: 0.875rem;
+  }
+}
