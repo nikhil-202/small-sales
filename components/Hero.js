@@ -18,7 +18,7 @@ const Hero = ({}) => {
           <div className={styles.decorativeLine} />
           
           <h1 className={styles.heading}>
-            Sugar Swirl
+            Sugar Swirls
             <div className={styles.nameWrapper}>
               <span className={styles.by}>By</span>
               <span className={styles.name}>Niranjana</span>

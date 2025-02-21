@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={styles.navContent}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoText}>Sugar Swirl</span>
+          <span className={styles.logoText}>Sugar Swirls</span>
         </Link>
 
         <ul className={styles.navLinks}>
